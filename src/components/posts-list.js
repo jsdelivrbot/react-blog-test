@@ -12,7 +12,7 @@ class PostsList extends Component {
     renderPosts() {
         return _.map(this.props.posts, post => {
             return (
-                <li className="list-group-item" key={post.id}>
+                <li onClick={() => this.props.history.push(`/posts/${post.id}`)} className="list-group-item" key={post.id}>
                     {post.title}
                 </li>
             );
